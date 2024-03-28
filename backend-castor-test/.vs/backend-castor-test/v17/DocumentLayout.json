@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\PROYECTOS\\backend-castor-test\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A17124B1-8CFA-4F9F-956A-56D9CB574FCB}|backend-castor-test\\backend-castor-test.csproj|d:\\proyectos\\backend-castor-test\\backend-castor-test\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A17124B1-8CFA-4F9F-956A-56D9CB574FCB}|backend-castor-test\\backend-castor-test.csproj|solutionrelative:backend-castor-test\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\PROYECTOS\\backend-castor-test\\backend-castor-test\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "backend-castor-test\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\PROYECTOS\\backend-castor-test\\backend-castor-test\\Properties\\launchSettings.json",
+              "RelativeToolTip": "backend-castor-test\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-23T03:36:56.298Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

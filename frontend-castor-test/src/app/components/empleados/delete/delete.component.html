@@ -1,0 +1,9 @@
+<h1 mat-dialog-title>Eliminar empleado</h1>
+<div mat-dialog-content>
+  ¿Está seguro que desea eliminar a: "{{ empleado.nombre }}"?
+</div>
+<mat-progress-bar mode="indeterminate" *ngIf="processing"></mat-progress-bar>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close (click)="delete()">Delete</button>
+  <button mat-button mat-dialog-close cdkFocusInitial>Back</button>
+</div>

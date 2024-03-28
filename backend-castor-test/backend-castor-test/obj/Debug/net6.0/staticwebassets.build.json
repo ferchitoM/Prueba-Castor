@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "ehdJq9/zTApXQh0FJwoktLFAYxJ7kLIkywQ+6JK4ZZg=",
+  "Source": "backend-castor-test",
+  "BasePath": "_content/backend-castor-test",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "backend-castor-test\\wwwroot",
+      "Source": "backend-castor-test",
+      "ContentRoot": "D:\\_PROYECTOS\\_2024\\Prueba-Castor\\backend-castor-test\\backend-castor-test\\wwwroot\\",
+      "BasePath": "_content/backend-castor-test",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\_PROYECTOS\\_2024\\Prueba-Castor\\backend-castor-test\\backend-castor-test\\wwwroot\\Uploads\\Empleados\\7\\captura.png",
+      "SourceId": "backend-castor-test",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\_PROYECTOS\\_2024\\Prueba-Castor\\backend-castor-test\\backend-castor-test\\wwwroot\\",
+      "BasePath": "_content/backend-castor-test",
+      "RelativePath": "Uploads/Empleados/7/captura.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\Empleados\\7\\captura.png"
+    }
+  ]
+}

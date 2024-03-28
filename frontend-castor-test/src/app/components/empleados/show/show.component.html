@@ -1,0 +1,25 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{ empleado.nombre }}</mat-card-title>
+    <mat-card-subtitle>{{ empleado.cargoNombre }}</mat-card-subtitle>
+  </mat-card-header>
+  <img
+    mat-card-image
+    [src]="myApiUrl + '/' + empleado.id + '/' + empleado.foto"
+  />
+  <mat-card-content>
+    <div class="content">
+      <p>
+        Número de documento: <span>{{ empleado.cedula }}</span>
+      </p>
+      <p>
+        En la entidad desde: <span>{{ empleado.fechaIngreso }}</span>
+      </p>
+    </div>
+    <mat-divider></mat-divider>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-button mat-dialog-close>Cerrar</button>
+  </mat-card-actions>
+</mat-card>

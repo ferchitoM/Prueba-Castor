@@ -1,0 +1,132 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Actualizar datos del empleado</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div class="content">
+      <form [formGroup]="form" (ngSubmit)="update()">
+        <!--? image input -->
+        <mat-form-field appearance="fill" class="file-container">
+          <div class="fileUploadContainer">
+            <ng-container *ngIf="form.get('Foto')!.value">
+              <img *ngIf="imageSelected" [src]="form.get('Foto')!.value" />
+              <img
+                *ngIf="!imageSelected"
+                [src]="myApiUrl + empleado.id + '/' + form.get('Foto')!.value"
+              />
+              <button
+                class="deleteButton"
+                mat-icon-button
+                (click)="fileInput.value = ''; form.get('Foto')?.setValue(null)"
+              >
+                <mat-icon>close</mat-icon>
+              </button>
+            </ng-container>
+            <!-- no image -->
+            <div
+              *ngIf="!form.get('Foto')!.value"
+              fxLayout="column"
+              fxLayoutAlign="center center"
+              fxLayoutGap="10px"
+            >
+              <mat-icon style="opacity: 60%">file_upload</mat-icon>
+              <button
+                mat-raised-button
+                color="primary"
+                style="width: 100%; opacity: 80%"
+              >
+                Browser
+              </button>
+              <small style="margin: 20px">Arrastra y suelta aquí</small>
+            </div>
+            <!-- put on top of the fileUploadContainer with opacity 0 -->
+            <input
+              class="inputImage"
+              #fileInput
+              class="fileInput"
+              type="file"
+              accept="image/*"
+              (change)="uploadImage($event)"
+            />
+          </div>
+          <input matInput formControlName="Foto" readonly [hidden]="true" />
+        </mat-form-field>
+        <mat-progress-bar
+          mode="indeterminate"
+          *ngIf="processingImage"
+          class="process-bar-image"
+        ></mat-progress-bar>
+
+        <!--? image input -->
+
+        <mat-form-field class="input">
+          <mat-label>Cédula</mat-label>
+          <input
+            matInput
+            maxlength="10"
+            placeholder="123"
+            formControlName="Cedula"
+            name="cedula"
+            required
+            type="number"
+          />
+        </mat-form-field>
+        <mat-form-field class="input">
+          <mat-label>Nombre</mat-label>
+          <input
+            matInput
+            placeholder="Nombre"
+            formControlName="Nombre"
+            name="nombre"
+            required
+            type="text"
+          />
+        </mat-form-field>
+        <mat-form-field class="datetime">
+          <mat-label>Choose a date</mat-label>
+          <input
+            matInput
+            readonly
+            [matDatepicker]="picker"
+            placeholder="Fecha de ingreso"
+            formControlName="FechaIngreso"
+            name="fechaIngreso"
+            required
+          />
+          <mat-datepicker-toggle
+            matIconSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field class="input">
+          <mat-label>Cargo</mat-label>
+          <mat-select
+            [(value)]="selected"
+            formControlName="CargoId"
+            name="cargoId"
+            required
+          >
+            <mat-option *ngFor="let item of cargos" value="{{ item.id }}">{{
+              item.nombre
+            }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </form>
+      <div class="error-message" *ngIf="errors">
+        <ul *ngFor="let e of errors">
+          <li>{{ e }}</li>
+        </ul>
+      </div>
+    </div>
+
+    <mat-divider></mat-divider>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-button mat-dialog (click)="update()">Guardar</button>
+    <button mat-button mat-dialog-close>Cancelar</button>
+  </mat-card-actions>
+  <mat-progress-bar mode="indeterminate" *ngIf="processing"></mat-progress-bar>
+</mat-card>
